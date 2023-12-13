@@ -20,10 +20,12 @@ if b[i]<b[i+1] {continue
 return true 
 }
 
+// !true -> false
+// !false -> true
 //0 1 2 3 4 8
 
 func sort (arr [] int) [] int {
-for mas(arr) != true {
+for !mas(arr) {
 for i:=0 ; i<len(arr)-1 ; i++ {
 if arr[i] >  arr[i+1]  { 
 x:=arr[i]
