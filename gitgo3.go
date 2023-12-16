@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func main (){
-a:= []int  {5,2,3,4}
-mass1:= [] int {1,3,5,6}
-mass2:= [] int {4,6,9}
-a[0]=42
-//arr:= [] int {5,2,7,8,4,1}
-fmt.Println(mass1)
-fmt.Println(mass2)
-fmt.Println(merge(mass1, mass2))  // res -- фактический аргумент (actual parameter)
+//a:= []int  {5,2,3,4}
+//mass1:= [] int {1,3,5,6}
+//mass2:= [] int {4,6,9}
+//a[0]=42
+arr:= [] int {5,2,7,8,4,1}
+//fmt.Println(mass1)
+//fmt.Println(mass2)
+fmt.Println(merge_sort(arr))  // res -- фактический аргумент (actual parameter)
 }
 func mas(b [] int) bool {
 for i:=0; i<len(b)-1; i++ {
@@ -93,6 +93,16 @@ if len(mass1) == 0 { res = append(res, mass2...)
 }
 return res
 }
+
+func merge_sort(arr [] int) [] int {
+if len(arr) == 0 || len(arr) == 1 {return arr}
+mid:= len(arr)/2
+return merge(merge_sort(arr[:mid]), merge_sort(arr[mid:])) 
+}
+
+
+
+
 
 
 /*
