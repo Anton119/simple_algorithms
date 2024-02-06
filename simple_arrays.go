@@ -1,4 +1,4 @@
-/*Задание: У вас есть переменная data, которая содержит входные пользовательские данные.
+/*Задание 1: У вас есть переменная data, которая содержит входные пользовательские данные.
 
 data - массив из элементов типа данных int.
 
@@ -12,16 +12,36 @@ package main
 import "fmt"
 
 func main () {
-data:=[]int{2, 4, 6, 8, 10}
-var result bool
+data_1:=[]int{2, 4, 6, 8, 10}
+data_2:=[]int{1,3,4,5}
+fmt.Println(even_or_odd(data_1))
+fmt.Println(odd_elements(data_2))
+}
+
+func even_or_odd (data_1[]int) bool {
     var even int 
     var odd int 
-    for i:=0; i<len(data); i++ {
-        if data[i] %2 == 0 { even=data[i]
-                           } else { odd=data[i] }
-        if odd %2 == 1 && even %2 == 0 { result=false 
-                       } else { result=true }
+    for i:=0; i<len(data_1); i++ {
+        if data_1[i] %2 == 0 { even=data_1[i]
+                           } else { odd=data_1[i] }
     }
-	fmt.Println(result)
+    if odd %2 == 1 && even %2 == 0 { return false 
+        } else { return true }
 
 }
+/*Задание 1: У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - массив из элементов типа данных int.
+
+Напишите код, который определяет все ли числа в массиве data нечетные и записывает логический результат в переменную result.
+*/
+func odd_elements (data_2[]int) bool {
+for i:=0; i<len(data_2)-1; i++ {
+    if data_2[i] %2 !=0 && data_2[i+1] %2 !=0  { continue 
+                                           } else { return false }
+}
+return true
+}
+
+
+
