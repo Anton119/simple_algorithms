@@ -42,6 +42,27 @@ for i:=0; i<len(data_2)-1; i++ {
 }
 return true
 }
+/*Задание 3: У вас есть переменные num, data которые содержат входные пользовательские данные.
 
+data - массив из элементов типа данных int.
+
+Напишите код, который определяет все ли числа в массиве data больше num и записывает логический результат в переменную result.
+
+*/
+func () is_num_less_than_elinanarray{
+    var result bool
+    data:=[]int{10,23,63,78,45,66,58}
+    num:=9
+   for i:=0; i<len(data); i++ {
+       if num < data[i]  { data[i] = num  
+       } else { result = false  } 
+       for j:=i; j<len(data); j++ {
+           if num < data[j] { result = true 
+           } else { result = false }
+       }
+       fmt.Println(data[i])
+   }
+    fmt.Println(result)
+}
 
 
