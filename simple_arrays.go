@@ -14,8 +14,11 @@ import "fmt"
 func main () {
 data_1:=[]int{2, 4, 6, 8, 10}
 data_2:=[]int{1,3,4,5}
+data_3:=[]int{4,56,78,2334,65}
+num_3:=10
 fmt.Println(even_or_odd(data_1))
 fmt.Println(odd_elements(data_2))
+fmt.Println(is_num_less_than_elinarray(data_3, num_3))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -29,7 +32,7 @@ func even_or_odd (data_1[]int) bool {
         } else { return true }
 
 }
-/*Задание 1: У вас есть переменная data, которая содержит входные пользовательские данные.
+/*Задание 2: У вас есть переменная data, которая содержит входные пользовательские данные.
 
 data - массив из элементов типа данных int.
 
@@ -42,27 +45,18 @@ for i:=0; i<len(data_2)-1; i++ {
 }
 return true
 }
+
 /*Задание 3: У вас есть переменные num, data которые содержат входные пользовательские данные.
 
 data - массив из элементов типа данных int.
 
 Напишите код, который определяет все ли числа в массиве data больше num и записывает логический результат в переменную result.
-
 */
-func () is_num_less_than_elinanarray{
-    var result bool
-    data:=[]int{10,23,63,78,45,66,58}
-    num:=9
-   for i:=0; i<len(data); i++ {
-       if num < data[i]  { data[i] = num  
-       } else { result = false  } 
-       for j:=i; j<len(data); j++ {
-           if num < data[j] { result = true 
-           } else { result = false }
-       }
-       fmt.Println(data[i])
-   }
-    fmt.Println(result)
+func is_num_less_than_elinarray (data_3[]int, num int) bool {
+    for i:=0; i<len(data_3)-1; i++ {
+        if data_3[i] > num && data_3[i+1] > num { continue
+        } else { return false }
+    }
+    return true 
 }
-
 
