@@ -12,13 +12,16 @@ package main
 import "fmt"
 
 func main () {
-data_1:=[]int{2, 4, 6, 8, 10}
-data_2:=[]int{1,3,4,5}
-data_3:=[]int{4,56,78,2334,65}
-num_3:=10
-fmt.Println(even_or_odd(data_1))
-fmt.Println(odd_elements(data_2))
-fmt.Println(is_num_less_than_elinarray(data_3, num_3))
+//data_1:=[]int{2, 4, 6, 8, 10}
+//data_2:=[]int{1,3,4,5}
+//data_3:=[]int{4,56,78,2334,65}
+//num_3:=10
+data_4:=[]int{150,2,34}
+num_4:=100
+//fmt.Println(even_or_odd(data_1))
+//fmt.Println(odd_elements(data_2))
+//fmt.Println(is_num_less_than_elinarray(data_3, num_3))
+fmt.Println(is_elinarray_less_than_num(data_4, num_4))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -58,5 +61,19 @@ func is_num_less_than_elinarray (data_3[]int, num int) bool {
         } else { return false }
     }
     return true 
+}
+/*Задание 4: У вас есть переменные num, data которые содержат входные пользовательские данные.
+
+data - массив из элементов типа данных int.
+
+Напишите код, который определяет все ли числа в массиве data меньше num и записывает логический результат в переменную result.
+*/
+func is_elinarray_less_than_num (data_4[]int, num_4 int) bool {
+    for i:=0; i<len(data_4); i++ {
+        if data_4[i] >= num_4 {
+            break
+        } else { return true }
+    }
+    return false 
 }
 
