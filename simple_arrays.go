@@ -9,19 +9,24 @@ data - массив из элементов типа данных int.
 
 package main 
 
-import "fmt"
+import( 
+"fmt"
+"strings"
+)
 
 func main () {
 //data_1:=[]int{2, 4, 6, 8, 10}
 //data_2:=[]int{1,3,4,5}
 //data_3:=[]int{4,56,78,2334,65}
 //num_3:=10
-data_4:=[]int{150,2,34}
-num_4:=100
+//data_4:=[]int{150,2,34}
+//num_4:=100
+data:=[]string{"Макс", "Дастин", "Майк", "Стив", "Билли"}
 //fmt.Println(even_or_odd(data_1))
 //fmt.Println(odd_elements(data_2))
 //fmt.Println(is_num_less_than_elinarray(data_3, num_3))
-fmt.Println(is_elinarray_less_than_num(data_4, num_4))
+//fmt.Println(is_elinarray_less_than_num(data_4, num_4))
+fmt.Println(reversed_array(data))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -75,5 +80,19 @@ func is_elinarray_less_than_num (data_4[]int, num_4 int) bool {
         } else { return true }
     }
     return false 
+}
+/*Задание 5: У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - массив из элементов типа данных string.
+
+Напишите код, который обращает порядок следования элементов массива data и записывает результат через запятую в переменную result.
+*/
+func reversed_array (data[]string) string {
+    arr := []string{}
+    for i:=0; i<len(data); i++ {
+        arr=append(arr, data[len(data)-i-1])
+    }
+    result := strings.Join(arr, ", ")
+    return result 
 }
 
