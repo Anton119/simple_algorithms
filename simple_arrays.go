@@ -12,6 +12,8 @@ package main
 import( 
 "fmt"
 "strings"
+"sort"
+"strconv"
 )
 
 func main () {
@@ -21,12 +23,14 @@ func main () {
 //num_3:=10
 //data_4:=[]int{150,2,34}
 //num_4:=100
-data:=[]string{"Макс", "Дастин", "Майк", "Стив", "Билли"}
+//data:=[]string{"Макс", "Дастин", "Майк", "Стив", "Билли"}
+data_6:=[]int{7,3,90,4,34}
 //fmt.Println(even_or_odd(data_1))
 //fmt.Println(odd_elements(data_2))
 //fmt.Println(is_num_less_than_elinarray(data_3, num_3))
 //fmt.Println(is_elinarray_less_than_num(data_4, num_4))
-fmt.Println(reversed_array(data))
+//fmt.Println(reversed_array(data))
+fmt.Println(sort_incr_arr(data_6))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -95,4 +99,21 @@ func reversed_array (data[]string) string {
     result := strings.Join(arr, ", ")
     return result 
 }
+/*Задание 6: У вас есть переменная data, которая содержит входные пользовательские данные.
 
+data - массив из элементов типа данных int.
+
+Напишите код, который сортирует числовые элементы массива data в порядке возрастания и записывает результат через запятую в переменную result.
+*/
+func sort_incr_arr (data_6[]int) string {
+    var result string 
+    stroki:=[]string{}
+    arrSlice:=data_6[:]
+    sort.Ints(arrSlice)
+    for i:=0; i<len(arrSlice); i++ {
+        stroki = append(stroki, strconv.Itoa(arrSlice[i]))
+    }
+    result = strings.Join(stroki, ", ")
+    return result 
+
+}
