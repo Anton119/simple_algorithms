@@ -24,13 +24,15 @@ func main () {
 //data_4:=[]int{150,2,34}
 //num_4:=100
 //data:=[]string{"Макс", "Дастин", "Майк", "Стив", "Билли"}
-data_6:=[]int{7,3,90,4,34}
+//data_6:=[]int{7,3,90,4,34}
+data_7:=[]int{5,6,78,1,4,90}
 //fmt.Println(even_or_odd(data_1))
 //fmt.Println(odd_elements(data_2))
 //fmt.Println(is_num_less_than_elinarray(data_3, num_3))
 //fmt.Println(is_elinarray_less_than_num(data_4, num_4))
 //fmt.Println(reversed_array(data))
-fmt.Println(sort_incr_arr(data_6))
+//fmt.Println(sort_incr_arr(data_6))
+fmt.Println(sort_reduce_arr(data_7))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -116,4 +118,27 @@ func sort_incr_arr (data_6[]int) string {
     result = strings.Join(stroki, ", ")
     return result 
 
+}
+/*Задание 7:У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - массив из элементов типа данных int.
+
+Напишите код, который сортирует числовые элементы массива data в порядке убывания и записывает результат через запятую в переменную result.
+*/
+func sort_reduce_arr (data_7 []int) string {
+    finalArr:=[]string{}
+    var result string 
+    for j:=0; j<len(data_7); j++ {
+        for i:=0; i<len(data_7)-1-j; i++ {
+            if data_7[i] < data_7[i+1] { 
+                m := data_7[i+1]; 
+                data_7[i+1] = data_7[i];
+                data_7[i] = m}
+        }
+    }
+    for i:=0; i<len(data_7); i++ {
+        finalArr = append(finalArr, strconv.Itoa(data_7[i]))
+    }
+    result = strings.Join(finalArr, ", ")
+    return result 
 }
