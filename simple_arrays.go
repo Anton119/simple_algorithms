@@ -142,3 +142,63 @@ func sort_reduce_arr (data_7 []int) string {
     result = strings.Join(finalArr, ", ")
     return result 
 }
+/*Задание 8:
+У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - массив из элементов типа данных int.
+
+Напишите код, который сортирует числовые элементы массива data в порядке возрастания, отсеивает дубликаты и записывает результат через запятую в переменную result.
+*/
+
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	//"strings"
+    "bufio"
+    "os"
+    //"sort"
+)
+
+func main() {
+    data := ReadInput()
+    //var result string
+    //arr := data
+    //slice := []int{}
+    for j:=0; j < len(data); j++ {
+        for i:=0; i<len(data)-1-j; i++ {
+            if data[i] > data[i+1] { m := data[i+1]; data[i+1] = data[i]; data[i] = m }
+                //data[i], data[i+1] = data[i+1], data[i]}
+        }
+    }
+
+
+
+    fmt.Println(removeDuplicates(data))
+}
+func removeDuplicates (arr[]int) []int {
+    new_array:=[]int{}
+        for i:=0; i<len(arr); i++ {
+            if same_el(arr, i) == false { new_array = append(new_array, arr[i]) }
+        }
+    
+  return new_array
+}    
+    
+func same_el (arr[]int, number int) bool {
+    for i:=0; i<len(arr); i++ {
+        if arr[i] == number { return true }
+    }
+    return false 
+}
+
+func ReadInput() ([]int) {
+    var data []int 
+    var input string 
+    scanner := bufio.NewScanner(os.Stdin)
+    scanner.Scan()
+    input = scanner.Text()
+    json.Unmarshal([]byte(input), &data)
+    return data
+}
