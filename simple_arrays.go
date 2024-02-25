@@ -25,14 +25,16 @@ func main () {
 //num_4:=100
 //data:=[]string{"Макс", "Дастин", "Майк", "Стив", "Билли"}
 //data_6:=[]int{7,3,90,4,34}
-data_7:=[]int{5,6,78,1,4,90}
+//data_7:=[]int{5,6,78,1,4,90}
+data_8:=[]int{1, 1, 3, 2, 4, 5, 2, 3}
 //fmt.Println(even_or_odd(data_1))
 //fmt.Println(odd_elements(data_2))
 //fmt.Println(is_num_less_than_elinarray(data_3, num_3))
 //fmt.Println(is_elinarray_less_than_num(data_4, num_4))
 //fmt.Println(reversed_array(data))
 //fmt.Println(sort_incr_arr(data_6))
-fmt.Println(sort_reduce_arr(data_7))
+//fmt.Println(sort_reduce_arr(data_7))
+fmt.Println(find_same_el_and_sort(data_8))
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -149,43 +151,31 @@ data - массив из элементов типа данных int.
 
 Напишите код, который сортирует числовые элементы массива data в порядке возрастания, отсеивает дубликаты и записывает результат через запятую в переменную result.
 */
-
-package main
-
-import (
-	"encoding/json"
-	"fmt"
-	//"strings"
-    "bufio"
-    "os"
-    //"sort"
-)
-
-func main() {
-    data := ReadInput()
-    //var result string
-    //arr := data
-    //slice := []int{}
-    for j:=0; j < len(data); j++ {
-        for i:=0; i<len(data)-1-j; i++ {
-            if data[i] > data[i+1] { m := data[i+1]; data[i+1] = data[i]; data[i] = m }
+func find_same_el_and_sort(data_8[]int) string {
+    var result string
+    finalArr := []string{}
+    for j:=0; j < len(data_8); j++ {
+        for i:=0; i<len(data_8)-1-j; i++ {
+            if data_8[i] > data_8[i+1] { m := data_8[i+1]; data_8[i+1] = data_8[i]; data_8[i] = m }
                 //data[i], data[i+1] = data[i+1], data[i]}
         }
     }
-
-
-
-    fmt.Println(removeDuplicates(data))
+    new_arr := removeDuplicates(data_8)
+        for i:=0; i<len(new_arr); i++ {
+            finalArr = append(finalArr, strconv.Itoa(new_arr[i]))
+        }
+    result = strings.Join(finalArr, ", ")
+    return result 
 }
 func removeDuplicates (arr[]int) []int {
     new_array:=[]int{}
         for i:=0; i<len(arr); i++ {
-            if same_el(arr, i) == false { new_array = append(new_array, arr[i]) }
+            if same_el(new_array, arr[i]) == false { new_array = append(new_array, arr[i]) }
         }
     
   return new_array
 }    
-    
+    // arr = {1, 1, 3, 2, 4, 5, 2, 3}
 func same_el (arr[]int, number int) bool {
     for i:=0; i<len(arr); i++ {
         if arr[i] == number { return true }
@@ -193,12 +183,3 @@ func same_el (arr[]int, number int) bool {
     return false 
 }
 
-func ReadInput() ([]int) {
-    var data []int 
-    var input string 
-    scanner := bufio.NewScanner(os.Stdin)
-    scanner.Scan()
-    input = scanner.Text()
-    json.Unmarshal([]byte(input), &data)
-    return data
-}
