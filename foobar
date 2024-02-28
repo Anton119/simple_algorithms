@@ -1,0 +1,267 @@
+runtime: goroutine stack exceeds 1000000000-byte limit
+runtime: sp=0x140201083a0 stack=[0x14020108000, 0x14040108000]
+fatal error: stack overflow
+
+runtime stack:
+runtime.throw({0x1029e45c1?, 0x200000008?})
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/panic.go:1077 +0x40 fp=0x16d4a3380 sp=0x16d4a3350 pc=0x10298bcd0
+runtime.newstack()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/stack.go:1107 +0x458 fp=0x16d4a3530 sp=0x16d4a3380 pc=0x1029a4868
+traceback: unexpected SPWRITE function runtime.morestack
+runtime.morestack()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:316 +0x70 fp=0x16d4a3530 sp=0x16d4a3530 pc=0x1029b7490
+
+goroutine 1 [running]:
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:97 +0x290 fp=0x140201083a0 sp=0x140201083a0 pc=0x1029e2ed0
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108450 sp=0x140201083a0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108500 sp=0x14020108450 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201085b0 sp=0x14020108500 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108660 sp=0x140201085b0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108710 sp=0x14020108660 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201087c0 sp=0x14020108710 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108870 sp=0x140201087c0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108920 sp=0x14020108870 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201089d0 sp=0x14020108920 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108a80 sp=0x140201089d0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108b30 sp=0x14020108a80 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108be0 sp=0x14020108b30 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108c90 sp=0x14020108be0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108d40 sp=0x14020108c90 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108df0 sp=0x14020108d40 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108ea0 sp=0x14020108df0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020108f50 sp=0x14020108ea0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109000 sp=0x14020108f50 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201090b0 sp=0x14020109000 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109160 sp=0x140201090b0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109210 sp=0x14020109160 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201092c0 sp=0x14020109210 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109370 sp=0x140201092c0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109420 sp=0x14020109370 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201094d0 sp=0x14020109420 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109580 sp=0x140201094d0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109630 sp=0x14020109580 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201096e0 sp=0x14020109630 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109790 sp=0x140201096e0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109840 sp=0x14020109790 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201098f0 sp=0x14020109840 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140201099a0 sp=0x140201098f0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109a50 sp=0x140201099a0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109b00 sp=0x14020109a50 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109bb0 sp=0x14020109b00 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109c60 sp=0x14020109bb0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109d10 sp=0x14020109c60 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109dc0 sp=0x14020109d10 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109e70 sp=0x14020109dc0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109f20 sp=0x14020109e70 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14020109fd0 sp=0x14020109f20 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a080 sp=0x14020109fd0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a130 sp=0x1402010a080 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a1e0 sp=0x1402010a130 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a290 sp=0x1402010a1e0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a340 sp=0x1402010a290 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a3f0 sp=0x1402010a340 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a4a0 sp=0x1402010a3f0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x1402010a550 sp=0x1402010a4a0 pc=0x1029e2c78
+...3050300 frames elided...
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040105f40 sp=0x14040105e90 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040105ff0 sp=0x14040105f40 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401060a0 sp=0x14040105ff0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106150 sp=0x140401060a0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106200 sp=0x14040106150 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401062b0 sp=0x14040106200 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106360 sp=0x140401062b0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106410 sp=0x14040106360 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401064c0 sp=0x14040106410 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106570 sp=0x140401064c0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106620 sp=0x14040106570 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401066d0 sp=0x14040106620 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106780 sp=0x140401066d0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106830 sp=0x14040106780 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401068e0 sp=0x14040106830 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106990 sp=0x140401068e0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106a40 sp=0x14040106990 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106af0 sp=0x14040106a40 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106ba0 sp=0x14040106af0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106c50 sp=0x14040106ba0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106d00 sp=0x14040106c50 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106db0 sp=0x14040106d00 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106e60 sp=0x14040106db0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106f10 sp=0x14040106e60 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040106fc0 sp=0x14040106f10 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107070 sp=0x14040106fc0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107120 sp=0x14040107070 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401071d0 sp=0x14040107120 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107280 sp=0x140401071d0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107330 sp=0x14040107280 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401073e0 sp=0x14040107330 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107490 sp=0x140401073e0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107540 sp=0x14040107490 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401075f0 sp=0x14040107540 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401076a0 sp=0x140401075f0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107750 sp=0x140401076a0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107800 sp=0x14040107750 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x140401078b0 sp=0x14040107800 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107960 sp=0x140401078b0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107a10 sp=0x14040107960 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107ac0 sp=0x14040107a10 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107b70 sp=0x14040107ac0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107c20 sp=0x14040107b70 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x0, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107cd0 sp=0x14040107c20 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x1, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107d80 sp=0x14040107cd0 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x3, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107e30 sp=0x14040107d80 pc=0x1029e2c78
+main.merge_sort({0x14000016150, 0x6, 0x6})
+	/Users/anton/simple_algorithms/gitgo3.go:103 +0x38 fp=0x14040107ee0 sp=0x14040107e30 pc=0x1029e2c78
+main.main()
+	/Users/anton/simple_algorithms/gitgo3.go:13 +0x60 fp=0x14040107f30 sp=0x14040107ee0 pc=0x1029e2bf0
+runtime.main()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:267 +0x2bc fp=0x14040107fd0 sp=0x14040107f30 pc=0x10298e54c
+runtime.goexit()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:1197 +0x4 fp=0x14040107fd0 sp=0x14040107fd0 pc=0x1029b9824
+
+goroutine 2 [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:398 +0xc8 fp=0x14000044f90 sp=0x14000044f70 pc=0x10298e978
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:404
+runtime.forcegchelper()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:322 +0xb8 fp=0x14000044fd0 sp=0x14000044f90 pc=0x10298e808
+runtime.goexit()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:1197 +0x4 fp=0x14000044fd0 sp=0x14000044fd0 pc=0x1029b9824
+created by runtime.init.6 in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:310 +0x24
+
+goroutine 3 [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:398 +0xc8 fp=0x14000045760 sp=0x14000045740 pc=0x10298e978
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:404
+runtime.bgsweep(0x0?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgcsweep.go:280 +0xa0 fp=0x140000457b0 sp=0x14000045760 pc=0x10297bd60
+runtime.gcenable.func1()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgc.go:200 +0x28 fp=0x140000457d0 sp=0x140000457b0 pc=0x102970af8
+runtime.goexit()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:1197 +0x4 fp=0x140000457d0 sp=0x140000457d0 pc=0x1029b9824
+created by runtime.gcenable in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgc.go:200 +0x6c
+
+goroutine 4 [GC scavenge wait]:
+runtime.gopark(0x1400005c000?, 0x102a01fe8?, 0x1?, 0x0?, 0x14000002d00?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:398 +0xc8 fp=0x14000045f50 sp=0x14000045f30 pc=0x10298e978
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:404
+runtime.(*scavengerState).park(0x102a91a40)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgcscavenge.go:425 +0x5c fp=0x14000045f80 sp=0x14000045f50 pc=0x10297960c
+runtime.bgscavenge(0x0?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgcscavenge.go:653 +0x44 fp=0x14000045fb0 sp=0x14000045f80 pc=0x102979b64
+runtime.gcenable.func2()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgc.go:201 +0x28 fp=0x14000045fd0 sp=0x14000045fb0 pc=0x102970a98
+runtime.goexit()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:1197 +0x4 fp=0x14000045fd0 sp=0x14000045fd0 pc=0x1029b9824
+created by runtime.gcenable in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mgc.go:201 +0xac
+
+goroutine 5 [finalizer wait]:
+runtime.gopark(0x140000445c8?, 0x1029db5a0?, 0x0?, 0x0?, 0x1029e3abf?)
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/proc.go:398 +0xc8 fp=0x14000044580 sp=0x14000044560 pc=0x10298e978
+runtime.runfinq()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mfinal.go:193 +0x108 fp=0x140000447d0 sp=0x14000044580 pc=0x10296fbe8
+runtime.goexit()
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/asm_arm64.s:1197 +0x4 fp=0x140000447d0 sp=0x140000447d0 pc=0x1029b9824
+created by runtime.createfing in goroutine 1
+	/opt/homebrew/Cellar/go/1.21.4/libexec/src/runtime/mfinal.go:163 +0x80
