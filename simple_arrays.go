@@ -27,7 +27,7 @@ func main () {
 //data_6:=[]int{7,3,90,4,34}
 //data_7:=[]int{5,6,78,1,4,90}
 //data_8:=[]int{1, 1, 3, 2, 4, 5, 2, 3}
-tags_1:=[]string{"action", "adventure", "strategy", "simulation", "sports", "racing", "puzzle", "strategy", "simulation", "sports"}
+tags_1:=[]string["action", "adventure", "strategy", "simulation", "sports", "racing", "puzzle", "strategy", "simulation", "sports"]
 //fmt.Println(even_or_odd(data_1))
 //fmt.Println(odd_elements(data_2))
 //fmt.Println(is_num_less_than_elinarray(data_3, num_3))
@@ -36,7 +36,7 @@ tags_1:=[]string{"action", "adventure", "strategy", "simulation", "sports", "rac
 //fmt.Println(sort_incr_arr(data_6))
 //fmt.Println(sort_reduce_arr(data_7))
 //fmt.Println(find_same_el_and_sort(data_8))
-find_same_el_instrings_and_sort(tags_1)
+find_same_el_instrings_and_sort
 }
 
 func even_or_odd (data_1[]int) bool {
@@ -192,11 +192,11 @@ tags - массив из элементов типа данных string.
 
 Напишите код, который сортирует строковые элементы массива tags в порядке возрастания, отсеивает дубликаты и записывает результат через запятую в переменную result.
 */
-func find_same_el_instrings_and_sort (tags_1[]string)  {
+func find_same_el_instrings_and_sort (tags_1[]string); string {
     new_arr:=[]string{}
-    new_arr = removeDuplicates_strings(tags_1)
-    sort.Strings(new_arr)
-    result := strings.Join(new_arr, ", ")
+    removeDuplicates_strings(tags_1)
+    sort.Strings(tags_1)
+    result := strings.Join(tags_1, ", ")
     fmt.Println(result)
 }
 
